@@ -6,16 +6,15 @@ import org.springframework.data.mongodb.core.mapping.Field
 
 @Document(collection = "student")
 data class Student(
-  @Id
-  private val id: String,
+  @Id val id: String,
 
   @Field("name") //can be removed as the field name is as the property name
-  private val name: String,
+  val name: String,
 
   @Field("mail")
-  private val email: String,
+  val email: String,
 
-  private val department: Department,
+  val department: Department,
 
-  private val subjects: List<Subject>,
+  val subjects: List<Subject>,
 )
